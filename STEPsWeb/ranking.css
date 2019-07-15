@@ -1,0 +1,90 @@
+<!doctype html>
+
+body {
+    margin: 0 auto;
+}
+
+.size {
+    border-style: none;
+    width: 500px;
+    height: 820px;
+    border-color: black;
+}
+
+img.cup {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 380px;
+    top: 25px; 
+}
+
+.headline{
+    margin: 0;
+    padding: 0;
+    height: 45px;
+}
+.container {
+    margin: inherit;
+    padding: inherit;
+    width: auto;
+    height: inherit;
+    border-bottom-style: solid;
+    border-bottom-width:medium;
+    border-bottom-color:#19bb9b;
+}
+
+.headline h1 {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+}
+.ranking form{
+    width: 450px;
+    height: 700px; 
+    position: absolute;
+    top: 70px;
+}
+
+.ranking-name {
+    width: inherit;
+    height: 90px;
+    margin-left: 20px;
+    padding: 0;
+    border-bottom-style: solid;
+    border-bottom-color: #5a5f65;
+    border-bottom-width: thin;
+}
+
+.ranking-name h3 {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    margin-top: 25px;
+    left: 150px;
+}
+
+.ranking-name ul {
+    overflow: auto;
+    position: relative;
+    margin-left: 70px;
+    top: 60px;
+}
+
+.ranking-name ul li {
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 100;
+    color: #4a4a4a;
+    list-style-type: none;
+    margin: 0 20px 0 20px;
+    float: left;
+}
+
+.ranking-name img.number {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>STEPs - Home</title>
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="Library/layer-v3.0.1/layer/layer.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="home.html"><img id="logowhite" src="assets/LogoWhite.png"></a>
+            <nav>
+                <ul>
+                    <li>
+                        <img onclick="openNotif()" src="assets/nav_bell.png">
+                    </li>
+                    <li>
+                        <a href="map.html"><img src="assets/Footprint.png"></a>
+                    </li>
+                    <li>
+                        <a href="statistic.html"><img src="assets/nav_statistics.png"></a>
+                    </li>
+                    <li>
+                        <a href="home.html"><img src="assets/nav_menu.png"></a>
+                    </li>
+                    <li>
+                        <img onclick="settings()" src="assets/nav_profile.png">
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="titleLine">
+        <h1>Anna's Current Goals</h1>
+    </div>
+    <div class="goalCircles">
+        <ul>
+            <li>
+                <div class="goalItem">
+                    <h3 onclick="viewGoal()">Learn to Spell 10 New Words</h3>
+                    <img onclick="viewGoal()" src="assets/Oval%201.png">
+                </div>
+            </li>
+            <li>
+                <div class="goalItem">
+                    <h3 onclick="viewGoal()">Paint My Self Portrait</h3>
+                    <img onclick="viewGoal()" src="assets/Oval%202.png">
+                </div>
+            </li>
+            <li>
+                <div class="goalItem">
+                    <h3 onclick="viewGoal()">Learn to Spell 10 New Words</h3>
+                    <img onclick="viewGoal()" src="assets/Oval%203.png">
+                </div>
+            </li>
+            <li>
+                <div class="goalItem">
+                    <h3 onclick="viewGoal()">Paint My Self Portrait</h3>
+                    <img onclick="viewGoal()" src="assets/Oval%204.png">
+                </div>
+            </li>
+            <li>
+                <div class="goalItem">
+                    <img onclick="setGoal()" src="assets/Oval%205.png">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="allS" class="stepView">
+        <ul>
+            <li>
+                <h3>View steps</h3>
+                <p class="done">1. Find 10 words from your own writing that you’ve spelt incorrectly.</p>
+                <p class="done">2. Search the internet one picture that reminds you of each word.</p>
+                <p class="doing">3. Create a document containing the images of the spelling words</p>
+                <p class="toDo">4. Each week, print out a copy of your spelling words page and write the words next to each image.</p>
+            </li>
+            <li>
+                <h3>View steps</h3>
+                <p class="done">1. Take some 'selfies' with a camera, smart phone or iPad.</p>
+                <p class="doing">2. Choose your favourite selfie and print it out on an A4 piece of paper.</p>
+                <p class="toDo">3. Decide materials you want to use to make your self-portrait.</p>
+                <p class="toDo">4. Collect all the materials you need an create your self portrait.</p>
+            </li>
+            <li>
+                <h3>View steps   </h3>
+                <p class="done">1. Find 10 words from your own writing that you’ve spelt incorrectly.</p>
+                <p class="done">2. Search the internet one picture that reminds you of each word.</p>
+                <p class="done">3. Create a document containing the images of the spelling words</p>
+                <p class="doing">4. Each week, print out a copy of your spelling words page and write the words next to each image.</p>
+            </li>
+            <li>
+                <h3>View steps</h3>
+                <p class="done">1. Take some 'selfies' with a camera, smart phone or iPad.</p>
+                <p class="done">2. Choose your favourite selfie and print it out on an A4 piece of paper.</p>
+                <p class="done">3. Decide materials you want to use to make your self-portrait.</p>
+                <p class="doing">4. Collect all the materials you need an create your self portrait.</p>
+            </li>
+            <li>
+                <h3>Maximum 5 Active Goals</h3>
+            </li>
+        </ul>
+    </div>
+
+    <div class="nextStep">
+        <h2 id="showNext">Only Show the Next Step.</h2>
+    </div>
+
+    <div class="allSteps">
+        <h2 id="showAll">Show All Steps.</h2>
+    </div>
+
+    <div id="nextS" class="stepView">
+        <ul>
+            <li>
+                <p class="doing">3. Create a document containing the images of the spelling words</p>
+            </li>
+            <li>
+                <p class="doing">2. Choose your favourite selfie and print it out on an A4 piece of paper.</p>
+            </li>
+            <li>
+                <p class="doing">4. Each week, print out a copy of your spelling words page and write the words next to each image.</p>
+            </li>
+            <li>
+                <p class="doing">4. Collect all the materials you need an create your self portrait.</p>
+            </li>
+            <li>
+                <h3>Maximum 5 Active Goals</h3>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="tab">
+        <li><a href="javascript:void(0)" class="tablinks" onclick="switchGoal(event, 'suggGoal')"><h2>Suggested Goals</h2></a></li>
+        <li><a href="javascript:void(0)" class="tablinks" onclick="switchGoal(event, 'holdGoal')"><h2>On-hold Goals</h2></a></li>
+        <li><a href="javascript:void(0)" class="tablinks" onclick="switchGoal(event, 'compGoal')" id="defaultTab"><h2>Completed Goals</h2></a></li>
+        <li><a href="javascript:void(0)" class="tablinks" onclick="switchGoal(event, 'dropGoal')"><h2>Dropped Goals</h2></a></li>
+    </ul>
+
+
+
+    <body>
+
+        <div id="suggGoal" class="tabcontent" class="goalCircles">
+            <ul>
+                <li>
+                    <h3 onclick="viewSuggested()">Learn to spell 10 new words</h3>
+                    <img onclick="viewSuggested()" src="assets/Oval%20S.png">
+                </li>
+                <li>
+                    <h3 onclick="viewSuggested()">Paint my self portrait</h3>
+                    <img onclick="viewSuggested()" src="assets/Oval%20S.png">
+                </li>
+                <li>
+                    <h3 onclick="viewSuggested()">Learn to spell 10 new words</h3>
+                    <img onclick="viewSuggested()" src="assets/Oval%20S.png">
+                </li>
+                <li>
+                    <h3 onclick="viewSuggested()">Paint my self portrait</h3>
+                    <img onclick="viewSuggested()" src="assets/Oval%20S.png">
+                </li>
+
+            </ul>
+        </div>
+
+        <div id="holdGoal" class="tabcontent" class="goalCircles">
+            <ul>
+                <li>
+                    <h3 onclick="viewOnhold()">Learn to spell 10 new words</h3>
+                    <img onclick="viewOnhold()" src="assets/Oval%20H1.png">
+                </li>
+                <li>
+                    <h3 onclick="viewOnhold()">Paint my self portrait</h3>
+                    <img onclick="viewOnhold()" src="assets/Oval%20H2.png">
+                </li>
+                <li>
+                    <h3 onclick="viewOnhold()">Learn to spell 10 new words</h3>
+                    <img onclick="viewOnhold()" src="assets/Oval%20H3.png">
+                </li>
+            </ul>
+        </div>
+
+        <div id="compGoal" class="tabcontent" class="goalCircles">
+            <ul>
+                <li>
+                    <h3 onclick="viewCompleted()">Learn to spell 10 new words</h3>
+                    <img onclick="viewCompleted()" src="assets/Oval%20C1.png">
+                </li>
+                <li>
+                    <h3 onclick="viewCompleted()">Paint my self portrait</h3>
+                    <img onclick="viewCompleted()" src="assets/Oval%20C2.png">
+                </li>
+                <li>
+                    <h3 onclick="viewCompleted()">Learn to spell 10 new words</h3>
+                    <img onclick="viewCompleted()" src="assets/Oval%20C3.png">
+                </li>
+                <li>
+                    <h3 onclick="viewCompleted()">Paint my self portrait</h3>
+                    <img src="assets/Oval%20C1.png">
+                </li>
+                <li>
+                    <h3 onclick="viewCompleted()">Learn to spell 10 new words</h3>
+                    <img onclick="viewCompleted()" src="assets/Oval%20C4.png">
+                </li>
+
+            </ul>
+        </div>
+
+
+        <div id="dropGoal" class="tabcontent" class="goalCircles">
+            <ul>
+                <li>
+                    <h3 onclick="viewDropped()">Learn to spell 10 new words</h3>
+                    <img onclick="viewDropped()" src="assets/Oval%20D1.png">
+                </li>
+                <li>
+                    <h3 onclick="viewDropped()">Paint my self portrait</h3>
+                    <img onclick="viewDropped()" src="assets/Oval%20D2.png">
+                </li>
+
+
+            </ul>
+        </div>
+
+        <footer>
+            <div class="container">
+                <span class="copyright-info">STEPs. Designed by Jing Zeng and Jingyi Tang</span>
+                <nav class="footer-nav">
+                    <ul>
+                        <li>Copyright</li>
+                        <li>About</li>
+                        <li>Learn More</li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </body>
+
+</html>

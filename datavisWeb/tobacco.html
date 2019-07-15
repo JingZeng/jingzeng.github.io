@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tabacco Tax</title>
+    <meta charset="utf-8">
+    <link href="tobacco.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+
+	
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <ul>
+                <li>HOME</li>
+                <li>NEWS</li>
+                <li>VIDEOS</li>
+                <li>EXPLORE</li>
+                <li>MORE</li>
+            </ul>
+            <nav>
+                <ul>
+                    <li>
+                        <img src="pics/icon_search.png">
+                    </li>
+                    <li>
+                        <img src="pics/icon_profile.png">
+                    </li>
+                    <li>
+                        <img src="pics/icon_facebook.png">
+                    </li>
+                    <li>
+                        <img src="pics/icon_twitter.gif">
+                    </li>
+                    <li>
+                        <img src="pics/icon_share.png">
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="article">
+        <div class="titleLine">
+            <p>BY JING ZENG | <em> 15 JUNE 2017</em></p>
+            <h1>Tobacco Tax: The Weapon To Reduce Smoking </h1>
+        </div>
+        <div id="banner"><img src="pics/unnamed.jpg"></div>
+
+       
+        <div class="container">
+            <br>
+            <h3>Tobacco smoking is one of the largest preventable causes of death and disease. It is associated with an increased risk of a wide range of health conditions, including heart disease, diabetes, stroke, cancer, renal disease, eye disease and respiratory conditions.</h3>
+            <h3>According to WHO, increasing the price of tobacco through higher taxes is the single most effective way to encourage tobacco users to quit and prevent children from starting to smoke. Taxes need to be increased regularly to correct for inflation and consumer purchasing power. Tobacco taxes are generally well accepted by the public and raise government revenues. Allocating tax revenues for tobacco control and other important health and social programmes further increases their popularity.</h3>
+
+            <div class="subtitle">
+                <h2> GLOBAL TOBACCO CONSUMPTION, PRICE AND TAX (2012)</h2>
+                <p>An overview of worldwide tobacco consumption percentage verses price and tax.</p>
+            </div>
+        </div>
+
+
+        <div id="artboard">
+            <div> <img id="maplegend" src="pics/maplegend.png"> </div>
+            <div id="mapid"></div>
+        </div>
+
+
+        <script>
+            var map = L.map('mapid').setView([40.151319, 17.668602], 2);
+            L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamluZ3p6eiIsImEiOiJjajJiNzR0ODMwMHVuMzJzNXRya3V0bDQ5In0.uzuvtdPXO7eTI1LoFxDvSA', {
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox://styles/mapbox/light-v9',
+                accessToken: 'pk.eyJ1IjoiamluZ3p6eiIsImEiOiJjajJiNzR0ODMwMHVuMzJzNXRya3V0bDQ5In0.uzuvtdPXO7eTI1LoFxDvSA'
+            }).addTo(map);
+
+
+
+            var countries = [
+                ["Argentina",26.3,2.79,69.92,-34.6118,-58.4173],
+                ["Armenia",28.25,1.69,38.37,40.1596,44.509],
+                ["Australia",16.55,8.24,63.1,-35.282,149.129],
+                ["Austria",36.65,4.97,75.01,48.2201,16.3798],
+                ["Azerbaijan",24.5,1.75,19.83,40.3834,49.8932],
+                ["Bangladesh",22.4,1.38,63.79,23.7055,90.4113],
+                ["Belarus",30.2,1.79,41.23,53.9678,27.5766],
+                ["Belgium",24.45,5.29,76.39,50.8371,4.3676],
+                ["Bolivia (Plurinational State of)",26.1,2.89,40.35,-13.9908,-66.1936],
+                ["Bosnia and Herzegovina",40.1,3.19,75.22,50.8371,4.3676],
+                ["Brazil",16.7,2.33,62.55,-15.7801,-47.9292],
+                ["Bulgaria",37.8,5.76,86.43,42.7105,23.3238],
+                ["Cambodia",24.35,0.86,17.13,11.5556,104.874],
+                ["Cameroon",17.3,7.54,21.46,3.8721,11.5174],
+                ["Canada",16.85,6.8,64.45,45.4215,-75.6919],
+                ["Chile",39.55,3.69,81.96,-33.475,-70.6475],
+                ["China",25.5,2.16,47.67,40.0495,116.286],
+                ["Colombia",12.05,1.67,50.87,4.6099,-74.082],
+                ["Croatia",35.85,4.81,70.41,45.8069,15.9614],
+                ["Czechia",33.45,4.91,79.97,50.0878,14.4205],
+                ["Denmark",20,4.66,78.67,55.6763,12.5681],
+                ["Dominican Republic",14.7,5.53,58.32,18.479,-69.8908],
+                ["Ecuador",9.35,5.67,64.21,-0.2295,-78.5243],
+                ["Egypt",23.15,2.29,71.47,30.050852,31.236832],
+                ["Estonia",34.5,4.8,79.24,59.4392,24.7586],
+                ["Fiji",26.7,4.23,40.63,-18.1149,178.399],
+                ["Finland",22.3,5.03,79.83,60.1608,24.9525],
+                ["France",28.45,6.69,79.98,48.8566,2.351],
+                ["Georgia",32.2,1.57,54.85,41.71,44.793],
+                ["Germany",31.15,5.74,74.51,52.5235,13.4115],
+                ["Ghana",6.3,2.35,23.12,5.5705,-0.208],
+                ["Greece",44.25,4.71,83.16,37.9792,23.7166],
+                ["Honduras",19.8,3.18,36.22,15.1333,-87.4667],
+                ["Hungary",30.5,4.82,84.1,47.4984,19.0408],
+                ["Iceland",18.1,7.42,56.95,64.1353,-21.8952],
+                ["India",12.6,5.33,33.19,28.6353,77.225],
+                ["Indonesia",37.9,2.2,35.49,-6.1975,106.83],
+                ["Iran (Islamic Republic of)",12,2.26,2.7,35.6878,51.4447],
+                ["Ireland",23.85,10.59,78.82,53.3441,-6.2675],
+                ["Italy",24.45,5.44,75.47,41.8955,12.4823],
+                ["Jamaica",17.95,12.19,46.06,17.9927,-76.792],
+                ["Japan",23.8,4.04,63.23,35.67,139.77],
+                ["Kazakhstan",28,1.26,27.03,51.1879,71.4382],
+                ["Kenya",14,1.69,48.79,-1.2798,36.8126],
+                ["Latvia",37.45,4.58,78.67,56.9465,24.1048],
+                ["Lebanon",36.2,2.35,44.41,33.8872,35.5134],
+                ["Lithuania",31.2,4.82,75.83,54.6896,25.2799],
+                ["Luxembourg",24.85,4.26,71.1,49.61,6.1296],
+                ["Malaysia",23.25,5.02,58.39,3.1243,101.684],
+                ["Mexico",15.45,4.56,66.5,19.427,-99.1276],
+                ["Mongolia",27.55,0,0,47.9129,106.937],
+                ["Morocco",22.1,4.08,68.02,33.9905,-6.8704],
+                ["Nepal",26.3,1.78,32.86,27.6939,85.3157],
+                ["Netherlands",26.1,6.17,73.13,52.3738,4.891],
+                ["Nigeria",8.55,1.75,21.67,9.058,7.4891],
+                ["Norway",25.2,8.33,72.8,59.9138,10.7387],
+                ["Oman",9.95,2.6,22.08,23.6105,58.5874],
+                ["Pakistan",22.1,0.97,61.63,30.5167,72.8],
+                ["Panama",7.7,6.57,56.52,8.9943,-79.5188],
+                ["Philippines",27.5,1.23,34.2,14.5515,121.035],
+                ["Poland",30.5,5.85,79.68,52.26,21.02],
+                ["Portugal",23.2,6.07,76.27,38.7072,-9.1355],
+                ["Republic of Korea",28.05,3.22,65.34,37.5323,126.957],
+                ["Republic of Moldova",25,1.95,44.6,28.854921,47.030189],
+                ["Romania",31.45,5.79,75.3,44.4479,26.0979],
+                ["Russian Federation",41.4,1.52,44.96,55.7558,37.6176],
+                ["Samoa",32.45,5.96,59.48,-13.8314,-171.752],
+                ["Saudi Arabia",14.65,2.63,22.91,24.6748,46.6977],
+                ["Senegal",11.45,1.61,29.04,14.7247,-17.4734],
+                ["Serbia",42.65,3.25,75.42,44.8024,20.4656],
+                ["Singapore",16.45,10.58,70.37,1.2894,103.85],
+                ["Slovakia",29.4,4.66,83.14,48.1484,17.1073],
+                ["Slovenia",21.25,4.93,78.44,46.0546,14.5044],
+                ["South Africa",19.75,5.16,47.63,-25.746,28.1871],
+                ["Spain",30.85,5.65,79.16,40.4167,-3.7033],
+                ["Sri Lanka",14.65,7.63,74.17,6.9215,79.8528],
+                ["Sweden",22.65,5.6,73.83,59.3327,18.0645],
+                ["Swaziland",10.3,4.59,63.6,46.948,7.4482],
+                ["Thailand",22.35,2.94,68.69,13.7308,100.521],
+                ["Tonga",30.85,7.63,64.3,-21.136,-175.216],
+                ["Turkey",28.1,4.92,80.25,39.7153,32.3606],
+                ["Uganda",10.65,1.79,44.2,0.3143,32.5729],
+                ["Ukraine",32.9,1.76,59.69,50.4536,30.5038],
+                ["United Kingdom of Great Britain and Northern Ireland",20.95,10.78,76.07,51.5002,-0.1262],
+                ["United States of America",18.65,6.07,42.93,38.8895,-77.032],
+                ["Uruguay",26,3.98,69.02,-34.8941,-56.0675],
+                ["Uzbekistan",13.6,1.64,32.71,41.3052,69.269],
+                ["Viet Nam",24.5,2.49,41.59,21.0069,105.825],
+                ["Zambia",16.05,1.68,25.79,-15.3982,28.2937],
+                ["Zimbabwe",16.9,0.67,57.62,-17.8312,31.0672],
+            ];
+
+
+            var C = [];
+            var S = [];
+            popup = [];
+
+
+            for (k = 0; k < countries.length; k++) {
+                popup[k] = "<dl><dt><b>COUNTRY:</b></dt>" +
+                    "<dd>" + countries[k][0] + "</dd>" +
+                    "<dt><b>CONSUMPTION:</b><dt>" +
+                    "<dd>" + countries[k][1] + "%</dd>" +
+                    "<dt><b>TOBACCO PRICE(PACK of 20):</b></dt>" +
+                    "<dd>$" + countries[k][2] + "</dd>" +
+                    "<dt><b>TOBACCO TAX</b></dt>" +
+                    "<dd>" + countries[k][3] + "%</dd></dl>";
+            }
+
+            //TABACCO CONSUMPTION PERCENTAGE: COLOUR OF THE CIRCLE
+            for (var j = 0; j < countries.length; j++) {
+                if (countries[j][1] > 40) {
+                    C[j] = "#53606a";
+                } else if (countries[j][1] > 30) {
+                    C[j] = "#e25630";
+                } else if (countries[j][1] > 20) {
+                    C[j] = "#f8a916";
+                } else if (countries[j][1] > 10) {
+                    C[j] = "#f1e299";
+                } else if (countries[j][1] <= 10) {
+                    C[j] = "#6fcb7a";
+                }
+            }
+            //TAX PERCENTAGE: SIZE OF THE CIRCLE
+            for (var h = 0; h < countries.length; h++) {
+                if (countries[h][3] > 75) {
+                    S[h] = 10;
+                } else if (countries[h][3] > 55) {
+                    S[h] = 7;
+                } else if (countries[h][3] > 30) {
+                    S[h] = 5;
+                } else if (countries[h][3] > 10) {
+                    S[h] = 3;
+                } else if (countries[h][3] <= 10) {
+                    S[h] = 1;
+                }
+            }
+
+
+            for (var i = 0; i < countries.length; i++) {
+                var circle = new L.circleMarker([countries[i][4], countries[i][5]], {
+                        color: C[i],
+                        weight: 1,
+                        fillColor: C[i],
+                        fillOpacity: 0.7,
+                        radius: S[i]
+                    })
+                    .bindPopup(popup[i])
+                    .addTo(map);
+            }
+
+        </script>
+
+		<p><em>(Click on the dots to view details for each country)</em></p>
+        <p><em><strong>Data source:</strong> World Health Organisation: Global Health Observatory data repository, Current smoking of any tobacco product (age-standardized rate).</em></p>
+        <br>
+        
+        <div class="container">
+        <h3>
+            While about 5.8 trillion cigarettes were smoked worldwide in 2012, cigarette consumption is still on the rise. 
+        </h3>
+        <h3> Increasing Tobacco excise tax, which results in higher tobacco product prices, is among the most effective tobacco control measures. The bulk of the peer-reviewed evidence from countries in all stages of economic development confirms that when tobacco product prices increase, people use less of these dangerous products, or quit using them, or never start.</h3>
+        </div>
+
+        <div class="subtitle">
+            <h2> THE PRICE AND TAX OF CIGARETTES (2014)</h2>
+            <p>Average National Taxes and Retail Price for a Pack of 20 Cigarettes in Six World Regions</p>
+        </div>
+        <div id="graph"><img src="pics/2.png"></div>
+        <p><em><strong>Data source:</strong> WHO report on the global tobacco epidemic 2015, Appendix IX: Tax and price data.</em></p>
+        <br>
+
+
+        <div class="container">
+            <h3>A fundamental building block of economic theory is the fact that increasing (or decreasing) the price of a commodity reduces (or increases) demand for that commodity. Price elasticity of demand refers to the extent to which use of a product falls or rises after increases or decreases in its price.</h3>
+
+            <h3>While demand for tobacco products is not as elastic as demand for many other consumer products, research has consistently demonstrated that increases in the price of tobacco products are followed by moderate falls in both the percentage of people smoking and the amount or number of tobacco products that remaining smokers consume. The percentage of people smoking declines because tax increases discourage non-users from starting, encourage current users to quit and, also very important, discourage former smokers from starting again. Because increases in tobacco taxes result in higher tobacco prices for everyone, the effect of even small resulting reductions in tobacco use can be very large across the whole population. </h3>
+    </div>
+            <p><em>(Scollo, M, Bayly, M. 13.3 The price of tobacco products in Australia. In Scollo, MM and Winstanley,MH [editors]. Tobacco in Australia: Facts and issues. Melbourne: Cancer Council Victoria; 2016.)</em></p>
+    
+
+            <div class="subtitle">
+                <h2> PRICE ELASTICITY OF DEMAND FOR TOBACCO PRODUCTS </h2>
+                <p>Tobacco price vs. proportion of current and quit smokers in Australia, 1991 to 2013</p>
+            </div>
+		<br>
+		<br><br><br><br>
+
+            <div id="artboard2">
+
+                <div id="infovismain"> <img id="underlayer" src="pics/underlayer.png"> </div>
+
+                <div id="tooltip">
+                    <p id="tooltip-text"></p>
+                </div>
+
+            </div>
+		<p><em>(Click on the blue triangle or timeline to view changes over years. After the lines finish growing, hover / tap on the grey dots to view details in each year.)</em></p>
+            <p><em><strong>Data source:</strong> Tobacco in Australia: Facts and issues. Melbourne: Cancer Council Victoria; 2016. cited National Drug Strategy Household Surveys</em></p>
+            <br> 
+
+            <script>
+                // set the dimensions and margins of the graph
+                var margin = {
+                    top: 20,
+                    right: 20,
+                    bottom: 50,
+                    left: 50
+                };
+                var width = 750 - margin.left - margin.right;
+                var height = 400 - margin.top - margin.bottom;
+
+                // append the svg object to the #infovismain div of the page
+                // appends a 'group' element to 'svg'
+                // moves the 'group' element to the top left margin
+                var svg = d3.select("#infovismain").append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom + 10)
+                    .append("g")
+                    .attr("transform",
+                        "translate(" + margin.left + "," + margin.top + ")");
+
+/*                // Read the data from .csv file
+                d3.csv("Australia_smoke_proportion_and_tobacco_price.csv", function(error, data) {
+                    if (error) {
+                        console.error(error);
+                    }
+*/
+
+				data = [
+   {
+      "year": 1991,
+      "current_smokers": 0.3,
+      "quit_ratio": 0.42
+   },
+   {
+      "year": 1993,
+      "current_smokers": 0.29,
+      "quit_ratio": 0.43
+   },
+   {
+      "year": 1995,
+      "current_smokers": 0.27,
+      "quit_ratio": 0.43
+   },
+   {
+      "year": 1998,
+      "current_smokers": 0.25,
+      "quit_ratio": 0.51
+   },
+   {
+      "year": 2001,
+      "current_smokers": 0.23,
+      "quit_ratio": 0.53
+   },
+   {
+      "year": 2004,
+      "current_smokers": 0.21,
+      "quit_ratio": 0.56
+   },
+   {
+      "year": 2007,
+      "current_smokers": 0.19,
+      "quit_ratio": 0.56
+   },
+   {
+      "year": 2010,
+      "current_smokers": 0.18,
+      "quit_ratio": 0.57
+   },
+   {
+      "year": 2013,
+      "current_smokers": 0.16,
+      "quit_ratio": 0.6
+   }
+];// JSON Document
+				
+
+                    // format the data
+                    data.forEach(function(d) {
+                        d.year = +d.year;
+                        d.current_smokers = +(d.current_smokers * 100);
+                        d.quit_ratio = +(d.quit_ratio * 100);
+                    });
+
+                    // set the Scales
+                    var xScale = d3.scaleTime()
+                        .domain(d3.extent(data, function(d) {
+                            return d.year;
+                        }))
+                        .range([0, width]);
+                    var yScale = d3.scaleLinear()
+                        .domain([0, d3.max(data, function(d) {
+                            return Math.max(d.current_smokers, d.quit_ratio);
+                        })])
+                        .range([height, 0]);
+
+                    // define the line generator
+                    var lineGenerator1 = d3.line()
+                        .x(function(d) {
+                            return xScale(d.year);
+                        })
+                        .y(function(d) {
+                            return yScale(d.current_smokers);
+                        });
+
+                    var lineGenerator2 = d3.line()
+                        .x(function(d) {
+                            return xScale(d.year);
+                        })
+                        .y(function(d) {
+                            return yScale(d.quit_ratio);
+                        })
+
+                    // Add paths
+                    var path1 = svg.append("path")
+                        .data([data])
+                        .attr("class", "line")
+                        .attr("d", lineGenerator1)
+                        .style("stroke", "#c47114");
+                    var path2 = svg.append("path")
+                        .data([data])
+                        .attr("class", "line")
+                        .attr("d", lineGenerator2)
+                        .style("stroke", "#073d84");
+
+                    // Add circles
+                    var c1 = svg.append("g")
+                        .attr("class", "c1");
+                    var c2 = svg.append("g")
+                        .attr("class", "c2");
+
+                    var circles1 = c1.selectAll("circle")
+                        .data(data)
+                        .enter()
+                        .append("circle")
+                        .attr("class", "circles circles1")
+                        .attr("cx", function(d) {
+                            return xScale(d.year);
+                        })
+                        .attr("cy", function(d) {
+                            return yScale(d.current_smokers);
+                        })
+                        .attr("r", "5px")
+                        .style("fill", "grey")
+                        .style("opacity", 0);
+
+                    var circles2 = c2.selectAll("circle")
+                        .data(data)
+                        .enter()
+                        .append("circle")
+                        .attr("class", "circles circles2")
+                        .attr("cx", function(d) {
+                            return xScale(d.year);
+                        })
+                        .attr("cy", function(d) {
+                            return yScale(d.quit_ratio);
+                        })
+                        .attr("r", "5px")
+                        .style("fill", "grey")
+                        .style("opacity", 0);
+
+                    /////////////////////////////////////////////////////////
+                    // Apply transition
+                    /////////////////////////////////////////////////////////
+                    var transTime = 10000;
+                    // Creating timeline elements
+                    // background
+                    var timelineWidth = 700;
+                    var time = svg.append("rect")
+                        .attr("id", "time")
+                        .attr("x", 0)
+                        .attr("y", height + margin.top + 25)
+                        .attr("width", timelineWidth)
+                        .attr("height", "10px")
+                        .style("fill", "#d4d8db");
+                    // time line
+                    var timeline = svg.append("line")
+                        .attr("id", "timeline")
+                        .attr("x1", 0)
+                        .attr("y1", height + margin.top + 30)
+                        .attr("x2", 0)
+                        .attr("y2", height + margin.top + 30)
+                        .attr("stroke", "black")
+                        .attr("stroke-width", "4px");
+                    var playHeight = height + margin.top + 20;
+                    // Play button
+                    var play = svg.append("polygon")
+                        .attr("id", "play")
+                        .attr("points", "-25," + playHeight + " -25," + (playHeight + 20) + " -5," + (playHeight + 10))
+                        .style("fill", "#073d84");
+                    // text to show the progress
+                    var counterText = svg.append("text")
+                        .attr("id", counterText)
+                        .attr("x", 0)
+                        .attr("y", playHeight - 5)
+                        .text(1991);
+
+                    // Find the length of each path
+                    var totalLength1 = path1.node().getTotalLength();
+                    var totalLength2 = path2.node().getTotalLength();
+
+                    animate();
+                    // A function to animate elements
+                    function animate() {
+                        // Transit the paths
+                        path1.attr("stroke-dasharray", totalLength1 + " " + totalLength1)
+                            .attr("stroke-dashoffset", totalLength1)
+                            .transition()
+                            .duration(transTime)
+                            .ease(d3.easeLinear)
+                            .attr("stroke-dashoffset", 0);
+                        path2.attr("stroke-dasharray", totalLength2 + " " + totalLength2)
+                            .attr("stroke-dashoffset", totalLength2)
+                            .transition()
+                            .duration(transTime)
+                            .ease(d3.easeLinear)
+                            .attr("stroke-dashoffset", 0);
+                        //Transit the circles
+                        circles1.style("opacity", 0)
+                            .transition()
+                            .duration(500)
+                            .delay(transTime)
+                            .style("opacity", 1);
+                        circles2.style("opacity", 0)
+                            .transition()
+                            .duration(500)
+                            .delay(transTime)
+                            .style("opacity", 1);
+                        // Transit the timeline
+                        timeline.attr("x2", "0")
+                            .transition()
+                            .duration(transTime)
+                            .ease(d3.easeLinear)
+                            .attr("x2", timelineWidth);
+                        // Transit the counter
+                        counterText.transition()
+                            .duration(transTime)
+                            .ease(d3.easeLinear)
+                            .tween("text", function() {
+                                var currentValue = +counterText.text();
+                                var interpolator = d3.interpolateRound(currentValue, 2013);
+                                return function(t) {
+                                    counterText.text(interpolator(t));
+                                }
+                            });
+                    }
+
+                    // Events' interactions
+                    // Handle clicking play button
+                    play.on("click", function() {
+                        d3.select(this).transition().duration(200)
+                            .attr("transform", "translate(1, 1)")
+                            .transition().duration(200)
+                            .attr("transform", "translate(-1, -1)");
+                        reset();
+                        animate();
+                    });
+
+                    // Handle clicking timeline
+                    d3.selectAll("#time, #timeline").on("click", function() {
+                        var coordinates = d3.mouse(time.node());
+                        var passed = coordinates[0] / timelineWidth;
+                        reset();
+                        timeline.transition().duration(0)
+                            .attr("x2", coordinates[0] + "px");
+                        path1.transition().duration(0)
+                            .attr("stroke-dashoffset", totalLength1 - (passed * totalLength1));
+                        path2.transition().duration(0)
+                            .attr("stroke-dashoffset", totalLength2 - (passed * totalLength2));
+                        if (passed > 0.99) {
+                            circles1.transition().duration(0)
+                                .style("opacity", "1");
+                            circles2.transition().duration(0)
+                                .style("opacity", "1");
+                        }
+                        counterText.transition().duration(0)
+                            .text(Math.ceil(1990 + passed * (2016 - 1990)));
+                    });
+
+                    // Handle mouseover circles
+                    d3.selectAll(".circles1").on("mouseover", function() {
+                        d3.select(this).attr("r", "10px");
+                        var qu = d3.select(this).data()[0].year;
+                        var re = d3.select(this).data()[0].current_smokers;
+                        var screenWidth = d3.select("html").node().getBoundingClientRect().width;
+                        var xPos = d3.event.clientX;
+                        var yPos = d3.event.clientY + 20;
+                        d3.select("#tooltip")
+                            .style("left", function() {
+                                if (200 + xPos >= screenWidth) {
+                                    return (xPos - 200) + "px";
+                                } else {
+                                    return xPos + "px";
+                                }
+                            })
+                            .style("top", yPos + "px")
+                            .transition()
+                            .style("visibility", "visible");
+                        d3.select("#tooltip-text").html("<span class=bold>YEAR</span>: " + qu + "<br/><span class=bold>CURRENT SMOKERS</span>: " + re + "<span class=bold>%</span>");
+                    });
+                    d3.selectAll(".circles2").on("mouseover", function() {
+                        d3.select(this).attr("r", "10px");
+                        var qu = d3.select(this).data()[0].year;
+                        var inc = d3.select(this).data()[0].quit_ratio;
+                        var screenWidth = d3.select("html").node().getBoundingClientRect().width;
+                        var xPos = d3.event.clientX;
+                        var yPos = d3.event.clientY + 20;
+                        d3.select("#tooltip")
+                            .style("left", function() {
+                                if (200 + xPos >= screenWidth) {
+                                    return (xPos - 200) + "px";
+                                } else {
+                                    return xPos + "px";
+                                }
+                            })
+                            .style("top", yPos + "px")
+                            .transition()
+                            .style("visibility", "visible");
+                        d3.select("#tooltip-text").html("<span class=bold>YEAR</span>: " + qu + "<br/><span class=bold>QUIT RATIO</span>: " + inc + "<span class=bold>%</span>");
+                    });
+                    // Handle mouseout circles
+                    d3.selectAll(".circles1").on("mouseout", function() {
+                        d3.select(this).attr("r", "5px");
+                        d3.select("#tooltip")
+                            .transition()
+                            .style("visibility", "hidden");
+                    });
+                    d3.selectAll(".circles2").on("mouseout", function() {
+                        d3.select(this).attr("r", "5px");
+                        d3.select("#tooltip")
+                            .transition()
+                            .style("visibility", "hidden");
+                    });
+                    // A function to reset all transitions 
+                    function reset() {
+                        path1.transition().duration(0)
+                            .attr("stroke-dasharray", totalLength1 + " " + totalLength1)
+                            .attr("stroke-dashoffset", totalLength1);
+                        path2.transition().duration(0)
+                            .attr("stroke-dasharray", totalLength2 + " " + totalLength2)
+                            .attr("stroke-dashoffset", totalLength2);
+                        circles1.transition().duration(0)
+                            .style("opacity", "0");
+                        circles2.transition().duration(0)
+                            .style("opacity", "0");
+                        timeline.transition().duration(0)
+                            .attr("x2", 0);
+                        counterText.transition().duration(0)
+                            .text("1990");
+                    }
+
+
+
+
+                    /*  // Add the X Axis
+                      svg.append("g")
+                          .attr("transform", "translate(0," + height + ")")
+                          .call(d3.axisBottom(xScale)); */
+
+                    // Add the Y Axis
+                    svg.append("g")
+                        .call(d3.axisLeft(yScale));
+
+                    // text label for the x axis
+                    svg.append("text")
+                        .attr("transform",
+                            "translate(" + (width / 2) + " ," +
+                            (height + margin.top + 20) + ")")
+                        .style("text-anchor", "middle")
+                        .text("Year")
+                        .style("font-family", "sans-serif");
+
+                    // text label for the y axis
+                    svg.append("text")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", 0 - margin.left)
+                        .attr("x", 0 - (height / 2))
+                        .attr("dy", "1em")
+                        .style("text-anchor", "middle")
+                        .text("Current Smokers and Quit Ratio (%)")
+                        .style("font-family", "sans-serif");
+
+//                });
+
+            </script>
+
+       
+
+
+        <div class="container">
+            <h3>Increasing the retail price of tobacco products through higher taxes is the single most effective way to decrease consumption and encourage tobacco users to quit. When tobacco prices increase:</h3>
+            <ul>
+                <li>Fewer people use tobacco;</li>
+                <li>People who continue to use tobacco, consume less; </li>
+                <li>People who have quit are less likely to start again; </li>
+                <li>The young are less likely to start using tobacco.</li>
+            </ul>
+
+            <h3>Tobacco taxes are generally well accepted – and even supported by many tobacco users – because most people understand that tobacco is harmful. In high-income countries, a 10% increase in tobacco prices will reduce consumption by about 4%. The effect of higher prices on reducing consumption is likely to be greater in low- and middle-income countries.</h3>
+
+            <div class="subtitle">
+                <h2> EFFECTIVENESS OF TOBACCO TAX, 2012 - 2020(projected) </h2>
+                <p>Significant decreased smoking rate of 10 countries with the highest tobacco tax </p>
+                <br>
+
+            </div>
+            <div id="graph1"><img src="pics/tax_effectiveness.png"></div>
+            
+            <p><em><strong>Data source:</strong> World Health Organisation: Global Health Observatory data repository, Current smoking of any tobacco product (age-standardized rate).</em></p>
+
+            <h3>Ten countries with the highest tobacco tax in 2012 have been selected, whose tobacco smoking rates are compared with the worlds average rate. The ten countries are: Bulgaria, Hungary, Greece, lovakia, Chile, Turkey, France, Czech Republic, Finland and Poland. World average smoking rate drops only 1.70% during the eight years, while these selected counties’ rate decreases by 3.90%.</h3>
+            <br>
+            
+<h3>Patterns of cigarette consumption vary widely within countries. Cigarette consumption displays large disparities and is associated with lower socioeconomic status, even in low- and middle-income countries. These inequalities can be reduced by the use of targeted tobacco control measures. For example, revenue from cigarette tax increases could be directed to fund tobacco prevention and cessation programs for disadvantaged groups.</h3>
+
+
+
+        </div>
+
+    </div>
+	<br><br><br>
+	
+	<div class="goback">
+
+	<button type="button" class="backButton"><a href="https://www.jingzeng.me/infoVisual.html">BACK TO PORTFOLIO</a></button>
+
+	
+	</div>
+    <footer>
+        <ul>
+            <li>DESIGNED BY JING ZENG</li>
+            <li> |</li>
+
+            <li>COPYRIGHT</li>
+            <li>ABOUT</li>
+            <li>LEARN MORE</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

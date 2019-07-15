@@ -1,0 +1,327 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ---- frames --- */
+
+section.container {
+    position: absolute;
+    width: 960px;
+    height: 800px;
+    background-color: white;
+}
+
+.close {
+    position: absolute;
+    left: 930px;
+    top: 10px;
+    margin: 0;
+}
+
+.roundLabel {
+    position: absolute;
+    width: 170px;
+    height: 400px;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+.headline {
+    position: absolute;
+    left: 170px;
+    top: 0;
+    height: 150px;
+    width: 750px;
+    margin: auto;
+}
+
+.button-bar {
+    position: absolute;
+    left: 300px;
+    bottom: 0px;
+    height: 80px;
+    width: 750px;
+    padding: 50px auto auto 50px;
+    margin: 0;
+}
+
+.button-bar-3 {
+    position: absolute;
+    left: 200px;
+    bottom: 0px;
+    height: 80px;
+    width: 750px;
+    padding: 40px auto auto 40px;
+    margin: 0;
+}
+
+.button-bar-1 {
+    position: absolute;
+    left: 400px;
+    bottom: 0px;
+    height: 80px;
+    width: 750px;
+    padding: 40px auto auto 40px;
+    margin: 0;
+}
+
+.stepsForm {
+    position: absolute;
+    left: 170px;
+    top: 200px;
+    width: 750px;
+    height: 400px;
+}
+
+.viewStep {
+    width: 700px;
+    height: 80px;
+    position: relative;
+    top: 10px;
+    padding-right: 60px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.monitorStatus {
+    position: absolute;
+    left: 710px;
+    top: 40px;
+    width: 750px;
+    height: auto;
+    font-size: 10px;
+    color: darkgray;
+    font-weight: lighter;
+    vertical-align: middle;
+}
+
+.reference {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 220px;
+    padding: 40px auto auto 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.congratsLine,
+.suggestLine,
+.droppedLine {
+    position: absolute;
+    left: 170px;
+    bottom: 150px;
+    height: 50px;
+    width: 720px;
+    padding: 40px auto auto 20px;
+    margin: 0;
+}
+
+.goalStatus {
+    position: absolute;
+    left: 170px;
+    top: 40px;
+    width: 750px;
+    height: auto;
+    font-size: 10px;
+    color: darkgray;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.footprintBar {
+    position: absolute;
+    left: 170px;
+    top: 150px;
+}
+
+
+/* ---- contents ---- */
+
+input[type="button"],
+input[type="submit"] {
+    color: #19BB9B;
+    font-size: 24px;
+    font-weight: 300;
+    background-color: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 8px;
+    width: 180px;
+    height: 35px;
+}
+
+input[type="button"].call-to-action,
+input[type="submit"].call-to-action {
+    background-color: #19BB9B;
+    color: #FFFFFF;
+    border: none;
+    margin: 5px auto auto 50px;
+}
+
+input[type="checkbox"] {
+    color: #19BB9B;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.roundLabel .circleFrame1 {
+    width: 126px;
+    height: 126px;
+    background: #60759B;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 45px;
+}
+
+.roundLabel .circleFrame2 {
+    width: 126px;
+    height: 126px;
+    background: #60759B;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 220px;
+}
+
+.roundLabel .circleFrame1-drop {
+    width: 126px;
+    height: 126px;
+    background: #FFA7B2;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 45px;
+}
+
+.roundLabel .circleFrame2-drop {
+    width: 126px;
+    height: 126px;
+    background: #FFA7B2;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 220px;
+}
+
+.roundLabel .circleFrame1-hold {
+    width: 126px;
+    height: 126px;
+    background: #9B9B9B;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 45px;
+}
+
+.roundLabel .circleFrame2-hold {
+    width: 126px;
+    height: 126px;
+    background: #9B9B9B;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 220px;
+}
+
+.roundLabel .circleFrame1 h1,
+.roundLabel .circleFrame1-drop h1,
+.roundLabel .circleFrame1-hold h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: lighter;
+    position: absolute;
+    left: 24px;
+    top: 14px;
+}
+
+.roundLabel .circleFrame2 h1,
+.roundLabel .circleFrame2-drop h1,
+.roundLabel .circleFrame2-hold h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: lighter;
+    position: absolute;
+    left: 20px;
+    top: 14px;
+}
+
+#goalComment {
+    position: absolute;
+    right: 27px;
+    bottom: 0px;
+}
+
+#dashLine {
+    position: absolute;
+    left: 7px;
+    top: 50px;
+    width: 50px;
+    height: 300px;
+    border-left: 1px dashed black;
+}
+
+.headline h2 {
+    font-weight: 400;
+    font-size: 36px;
+    position: absolute;
+    top: 60px;
+}
+
+.viewStep img {
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.viewStep span {
+    font-size: 20px;
+}
+
+.reference a {
+    font-size: 20px;
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+}
+
+.congratsLine h1,
+.suggestLine h1,
+.droppedLine h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    color: darkgrey;
+}
+
+.congratsLine p {
+    text-align: center;
+    font-weight: 300;
+    color: darkgrey;
+    font-size: 14px;
+}
+
+.goalStatus img {
+    vertical-align: middle;
+}
+
+.stepOption {
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+}
+
+.stepOption label {
+    color: #19BB9B;
+}

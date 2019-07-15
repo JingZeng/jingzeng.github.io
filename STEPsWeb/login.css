@@ -1,0 +1,139 @@
+<!doctype html>
+
+body {
+    margin: 0 auto;
+    
+}
+
+.size {
+    border-style: none;
+    width: 600px;
+    height: 800px;
+    border-color: black;
+}
+
+.close {
+    position: absolute;
+    left: 780px;
+    top: 20px;
+    margin: 0;
+}
+
+
+.container h2 {
+    font-family: Helvetica;
+    color: black;
+    font-size: 36px;
+    text-align: center;
+    font-weight:300;
+    position: absolute;
+    top: 70px;
+    left: 380px;
+}
+
+/*-------------Welcome Back-----------------*/
+.roundLabel .circleFrame {
+    width: 138px;
+    height: 138px;
+    background: #60759B;
+    border-radius: 69px;
+    position: absolute;
+    left: 230px;
+    top: 120px;
+}
+
+.roundLabel h1 {
+    font-family: Helvetica;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: lighter;
+    position: absolute;
+    top: 20px;
+}
+
+.input-firstname {
+    font-family: Helvetica;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 380px;
+    top: 210px;
+}
+
+/*-------------Email-----------------*/
+.input-email {
+    font-family: Helvetica;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 120px;
+    top: 320px;
+}
+
+.input-email input, .input-field select{
+    border: 1px solid #979797;
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 80px;
+    top: 50px;
+}
+
+/*-------------Passwords Confirm -----------------*/
+.input-password {
+    font-family: Helvetica;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 120px;
+    top: 450px;
+}
+
+.input-password input, .input-field select{
+    border: 1px solid #979797;
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 80px;
+    top: 50px;
+}
+
+.forgotpass {
+    font-family: Helvetica;
+    color: #696969;
+    font-size: 18px;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 400px;
+    top: 580px;
+}
+
+/*-------------Log In-----------------*/
+.loginbutton {
+    position: absolute;
+    left: 200px;
+    top: 650px;
+}
+
+input[type="submit"] {
+    background-color: #19BB9B;
+    font-size: 24px;
+    font-weight: 300;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    width: 180px;
+    height: 35px;
+}

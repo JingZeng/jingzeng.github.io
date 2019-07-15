@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>STEPs - Map</title>
+    <link href="map.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="Library/layer-v3.0.1/layer/layer.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="home.html"><img id="logowhite" src="assets/LogoWhite.png"></a>
+            <nav>
+                <ul>
+                    <li>
+                        <img onclick="openNotif()" src="assets/nav_bell.png"></a>
+                    </li>
+                    <li>
+                        <a href="map.html"><img src="assets/Footprint.png"></a>
+                    </li>
+                    <li>
+                        <a href="statistic.html"><img src="assets/nav_statistics.png"></a>
+                    </li>
+                    <li>
+                        <a href="home.html"><img src="assets/nav_menu.png"></a>
+                    </li>
+                    <li>
+                        <img onclick="settings()" src="assets/nav_profile.png">
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="headline">
+        <div class="container">
+            <p>
+                <h2>Anna's Map Album</h2></p>
+            <p>
+                <h3>Current location: Step.17 of Sydney. Australia</h3></p>
+            <p>
+                <h3>Total Steps:  x   Total Goals: x</h3></p>
+        </div>
+        <div class="ranking">
+            <h3>View Class Ranking</h3>
+            <img onclick="openRank()" class="cup" src="assets/cup.png">
+        </div>
+    </section>
+    <div id="slider">
+        <div class="scroll" style="overflow:hidden;">
+            <ul class="maps-list">
+                <li>
+                    <img class="nextmap" src="assets/nextmap-larger.png">
+                </li>
+                <li>
+                    <img onclick="largePic1()" class="sydneymap" src="assets/larger.jpg">
+                </li>
+                <li>
+                    <img class="nextmap" src="assets/nextmap-larger.png">
+                </li>
+                <li>
+                    <img class="nextmap" src="assets/nextmap-larger.png">
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <span class="copyright-info">STEPs. Designed by Jing Zeng and Jingyi Tang</span>
+            <nav class="footer-nav">
+                <ul>
+                    <li>Copyright</li>
+                    <li>About</li>
+                    <li>Learn More</li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

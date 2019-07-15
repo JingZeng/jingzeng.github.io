@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Set New Steps</title>
+    <link href="set-steps.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="Library/layer-v3.0.1/layer/layer.js"></script>
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="close">
+
+        </div>
+
+        <div class="roundLabel">
+            <div class="circleFrame1">
+                <h1>Goal</h1>
+            </div>
+            <div class="circleFrame2">
+                <h1>Steps</h1>
+            </div>
+        </div>
+
+
+        <div class="input-field">
+            <input type="goalName" placeholder="Learn to spell 10 new words.">
+            <div id="goalComment">
+                <img onclick="addComt()" src="assets/comment.png">
+            </div>
+        </div>
+
+
+        <label class="stepsDescr"><em>Now add steps towards your new goal:</em></label>
+
+        <form class="stepsForm">
+            <div id="dashLine"></div>
+            <div class="addStep">
+                <a href="#"><img src="assets/add-step.png"></a>
+            </div>
+
+            <div class="editStep">
+                <div class="input-field">
+                    <a href="#.html"><img src="assets/locate-step.png"></a>
+                    <input type="goalName" placeholder="1.  Find examples of 10 words that I’ve spelt incorrectly.">
+                </div>
+                <div class="editStepIcon">
+                    <img onclick="deleteit()" src="assets/trash.png">
+                    <input type="checkbox" name="step" value="s2" checked>
+                    <label>Due: </label>
+                    <input class="setdate" placeholder="enter a date...">
+                    <img onclick="addComt()" src="assets/comment.png">
+                </div>
+            </div>
+
+            <div class="addStep">
+                <a href="#"><img src="assets/add-step.png"></a>
+            </div>
+
+            <div class="editStep">
+                <div class="input-field">
+                    <a href="#"><img src="assets/locate-step.png"></a>
+                    <input type="goalName" placeholder="2.  Search the internet one picture that reminds me of each word.">
+                </div>
+                <div class="editStepIcon">
+                    <img onclick="deleteit()" src="assets/trash.png">
+                    <input type="checkbox" name="step" value="s2" checked>
+                    <label>Due: </label>
+                    <input class="setdate" placeholder="enter a date...">
+                    <img onclick="addComt()" src="assets/comment.png">
+                </div>
+            </div>
+
+            <div class="addStep">
+
+                <a href="#"><img src="assets/add-step.png"></a>
+            </div>
+            <div class="editStep">
+                <div class="input-field">
+                    <img src="assets/locate-step.png">
+                    <input type="goalName" placeholder="3.  Each week, print out a copy of my spelling words page and write the words next to each image. Show teacher and spell them.">
+                </div>
+                <div class="editStepIcon">
+                    <img onclick="deleteit()" src="assets/trash.png">
+                    <input type="checkbox" name="step" value="s2" checked>
+                    <label>Due: </label>
+                    <input class="setdate" placeholder="enter a date...">
+                    <img onclick="addComt()" src="assets/comment.png">
+                </div>
+            </div>
+
+            <div class="addStep">
+                <a href="#"><img src="assets/add-step.png"></a>
+            </div>
+
+        </form>
+
+        <div class="info">
+            <a href="#"><img src="assets/add-step.png"></a>
+            <label><em>Add or insert new steps</em></label>
+            <a href="#"><img src="assets/locate-step.png"></a>
+            <label><em>Drag to adjust order</em></label>
+
+        </div>
+
+
+        <div class="button-bar">
+            <input type="button" value="Back" onclick="location.href='set-goal.html';" class="call-to-action" />
+            <input type="button" value="Next" onclick="location.href='confirm-goal.html';" class="call-to-action" />
+            <input type="submit" value="Save" onclick="autoSave()" class="call-to-action" />
+        </div>
+
+
+        <div class="reference">
+            <a href="assets/1016Ass3UserGuide.pdf">How to set a goal?</a>
+        </div>
+
+
+    </section>
+</body>
+
+</html>

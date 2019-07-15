@@ -1,0 +1,397 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+} 
+
+h1 {
+    font-size: 48px;
+    line-height: 49px;
+    color: #EEEEEE;
+    font-weight: bolder;
+}
+
+h3 {
+    font-weight: lighter;
+    line-height: 30px;
+}
+
+p {
+    font-weight: lighter;
+    line-height: 120%;
+    margin: 15px 50px;
+}
+
+
+
+/*------------------ Header --------------------*/
+
+header {
+    width: auto;
+    height: 50px;
+}
+
+header .container {
+    background-color: black;
+    margin:  auto;
+    overflow: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+}
+
+
+header .container > ul {
+    float: left;
+
+
+}
+
+header .container > nav {
+    float: right;
+    height: 40px;
+
+}
+
+header .container  ul {
+
+    list-style-type: none;
+    overflow: auto;
+    margin: 10px 5px 5px 0;
+    padding: 0;
+}
+
+header .container  ul > li {
+
+    float: left;
+    margin: 0 40px 0 0;
+    align-items: center;
+    vertical-align: middle;
+    color: white;
+}
+
+header .container nav > ul > li > img {
+height: 20px;
+width: 20px;
+}
+
+#banner img{
+	width: 100%
+    
+    
+}
+/* -------- article ---------- */
+
+.article{
+    padding: 5px 70px;
+    
+}
+
+.titleLine {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.titleLine h1 {
+    text-align: left;
+    color: black;
+}
+
+.subtitle {
+    padding: 40px 5px 5px 20px;
+    align-items: center;
+}
+
+.subtitle h2 {
+    text-align: center;
+}
+
+
+.subtitle h2 , .subtitle p {
+    text-align: center;
+}
+
+#graph img {
+    display: block;
+    margin: auto;
+    width: 70%;
+   
+}
+
+#graph1 img {
+    display: block;
+    margin: auto;
+    width: 70%;
+   
+}
+
+#artboard {
+    
+	height: auto;
+    width: auto;
+    padding: 0;
+    margin: auto; 
+}
+
+#artboard2 {
+
+    height: auto;
+    width: auto;
+    padding-left: 100px;
+    margin: auto; 
+}
+
+#infovismain {
+    display: block;
+    margin: auto; 
+}
+
+#maplegend {
+    width: 150px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 450px;
+    z-index: 4;
+}
+
+
+
+#mapid {
+    height: 500px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    z-index: 0;
+}
+
+.legend {
+    width: 50px;
+    line-height: 18px;
+    color: #555;
+}
+
+.legend i {
+    width: 50px;
+    height: 25px;
+    margin-right: 4px;
+    opacity: 0.7;
+    float: left;
+}
+
+.legend .circle {
+    border-radius: 50%;
+    /*width: 10px;
+    height: 10px;*/
+    margin-top: 4px;
+}
+
+.info {
+    padding: 14px 18px;
+    font: 14px/18px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#map {
+    height: 600px;
+    width: 1200px;
+}
+
+#tooltip {
+    position: fixed;
+    width: 200px;
+    margin: 0;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: white;
+    visibility: hidden;
+    z-index: 10000000;
+}
+
+#tooltip-text {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#buttons {
+    position: absolute;
+    top: 655px;
+    left: 15px;
+    z-index: 1000000;
+}
+
+button {
+    width: 70px;
+}
+
+.highlight,
+.aus {
+    cursor: context-menu;
+}
+/*         #legend {
+position: absolute;
+top: 555px;
+z-index: 1000000;
+visibility: hidden;
+} */
+
+.line {
+    fill: none;
+    stroke: #084594;
+    stroke-width: 3px;
+}
+
+#infovismain {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    width: 960px;
+    height: 520px;
+    margin: 3px;
+    padding: 5px;
+    z-index: 2;
+}
+
+#legendinfo {
+    background-color: #9ecae1;
+    width: 960px;
+    height: 50px;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 3px;
+    padding: 5px;
+}
+
+#underlayer{
+    width: 945px;
+    position: absolute;
+    margin-top: -98px;
+    margin-left: -22px;
+    z-index: -1;
+}
+
+#text {
+    background-color: #f7fbff;
+    opacity: 1;
+    width: 960px;
+    height: 100%;
+    margin: 3px;
+    padding: 5px;
+    margin-left: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: justify;
+    line-height: 150%;
+}
+
+#tooltip {
+    position: fixed;
+    width: 200px;
+    margin: 0;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #ced4db;
+    visibility: hidden;
+    z-index: 3;
+}
+
+#tooltip-text {
+    margin: 0;
+    padding: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.container  {
+    margin: 5px 60px;
+}
+
+.container ul {
+    margin-left: 30px;
+    margin-top: -10px;
+	list-style: circle;
+    font-weight: lighter;
+    line-height: 24px;
+}
+
+
+.goback{
+	width: 100%;
+	text-align: center;
+}
+
+.backButton {
+    background-color: white; /* Green */
+    border:  2px solid #008CBA;
+	border-radius: 8px;
+    color: black; 
+    padding: 16px 32px;
+	margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	width: 400px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.backButton:hover {
+    background-color: #008CBA;
+    color: white;
+}
+/* ------------ footer-------------- */
+
+footer {
+    margin-top: 150px;
+    height: 44px;
+    background-color: black;
+    color: white;
+    font-weight: lighter;
+}
+
+footer ul {
+    list-style: none;
+    margin-bottom: 5px;
+    margin-left: 200px;
+    position: absolute;
+}
+
+
+footer  ul > li {
+    float: left;
+    margin: 0 120px 0 0;
+}
+
+
+/* Change background color of links on hover */
+
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+ul.tab li a:focus,
+.active {
+    background-color: #ccc;
+}

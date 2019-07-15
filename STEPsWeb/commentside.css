@@ -1,0 +1,107 @@
+<!doctype html>
+
+body {
+    margin: 0 auto;
+}
+
+.size {
+    border-style:none;
+    width: 380px;
+    height: 680px;
+    border-color: black;
+}
+
+img.search {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 340px;
+    top: 25px; 
+}
+
+.headline h3 {
+    font-family: Helvetica;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+.comment-tab {
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.comment-tab nav ul {
+    list-style-type: none;
+    overflow: auto;
+    height: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color:#19bb9b;
+    
+}
+.comment-tab nav ul li {
+    float: left;
+    margin: 0 20px 0 20px;
+    border-left-style: solid;
+    border-left-width: thin;
+    border-left-color:#19bb9b;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+}
+
+
+section.comments form {
+    width: 360px;
+    height: 550px; 
+    position: absolute;
+    top: 95px;
+}
+
+.each-comments {
+    width: auto;
+    height: 90px;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 0;
+    border-bottom-style: solid;
+    border-bottom-color: #5a5f65;
+    border-bottom-width: thin;
+}
+
+.each-comments h3 {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    margin-top: 20px;
+    left: 100px;
+}
+
+.each-comments .message {
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    top: 55px;
+    margin-left: 90px;
+}
+
+.each-comments .time {
+    margin-top: 30px;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 100;
+    color: #5f6773;
+    float: right;
+}
+
+.each-comments img.initial {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Suggested Goals</title>
+    <link href="viewGoals.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="Library/layer-v3.0.1/layer/layer.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <div class="close">
+            <a href="#"><img src="assets/Cross.png"></a>
+        </div>
+
+        <div class="monitorStatus">
+            <img src="assets/eye.png">
+            <label><b>T</b> <em>Assisted by teachers</em></label>
+            <p></p>
+            <img src="assets/eye-checked.png">
+            <label><b>P</b> <em>Not assisted by parents</em></label>
+        </div>
+
+        <div class="roundLabel">
+            <div class="circleFrame1">
+                <h1>Goal</h1>
+            </div>
+            <div class="circleFrame2">
+                <h1>Steps</h1>
+            </div>
+        </div>
+
+        <div class="goalStatus">
+            <img src="assets/goal-suggested.png">
+            <span>Suggested Goal</span>
+        </div>
+        <div class="headline">
+            <h2>Learn to spell 10 new words.</h2>
+            <a href="#"><img id="goalComment" src="assets/comment.png"></a>
+        </div>
+
+        <div class="footprintBar">
+            <img src="assets/footprint-grey.png">
+            <img src="assets/footprint-grey.png">
+            <img src="assets/footprint-grey.png">
+            <img src="assets/footprint-grey.png">
+        </div>
+
+        <form class="stepsForm">
+            <div id="dashLine"></div>
+            <div class="viewStep">
+                <div class="stepName">
+                    <img src="assets/locate-step.png">
+
+                    <span>1. Find examples of 10 words that I’ve spelt incorrectly.</span>
+                </div>
+                <div class="stepOption"> <img src="assets/footprint-grey.png">
+                    <a href="#"><img src="assets/Attach-grey.png"></a>
+                    <label><b>Due: 15-06-2016 </b>　</label>
+                    <a href="#"><img src="assets/comment.png"></a>
+                </div>
+            </div>
+
+            <div class="viewStep">
+                <div class="stepName">
+                    <img src="assets/locate-step.png">
+
+                    <span>2. Search the internet one picture that reminds me of each word.</span>
+                </div>
+                <div class="stepOption">
+                    <img src="assets/footprint-grey.png">
+                    <a href="#"><img src="assets/Attach-grey.png"></a>
+                    <label><b>Due: N /A</b>　 　　　</label>
+                    <a href="#"><img src="assets/comment.png"></a>
+                </div>
+            </div>
+
+            <div class="viewStep">
+                <div class="stepName">
+                    <img src="assets/locate-step.png">
+
+                    <span>3. Each week, print out a copy of my spelling words page and write the 　　words next to each image. Show teacher and spell them.</span>
+                </div>
+                <div class="stepOption">
+                    <img src="assets/footprint-grey.png">
+                    <a href="#"><img src="assets/Attach-grey.png"></a>
+                    <label><b>Due: 27-06-2016</b> 　</label>
+                    <a href="#"><img src="assets/comment.png"></a>
+                </div>
+            </div>
+
+            <div class="viewStep">
+                <img src="assets/locate-step.png">
+                <span>Extra bonus after completion:　</span>
+                <img src="assets/footprint-grey.png">
+
+            </div>
+
+        </form>
+
+        <div class="suggestLine">
+            <h1>This goal is suggested by your teacher.</h1>
+        </div>
+
+
+        <div class="button-bar-3">
+            <input type="button" value="Edit" onclick="location.href='set-steps.html';" class="call-to-action" />
+            <input type="submit" value="Accept" onclick="#" class="call-to-action" />
+            <input type="submit" value="Close" onclick="#" class="call-to-action" />
+        </div>
+
+
+        <div class="reference">
+            <a href="assets/PLP.pdf">What will you benefit from ‘PLP’?</a>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

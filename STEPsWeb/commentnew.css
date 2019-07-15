@@ -1,0 +1,135 @@
+<!doctype html>
+body {
+    margin: 0 auto;
+    width: 380px;
+}
+
+.size {
+    border-style: none;
+    width: 380px;
+    height: 450px;
+    border-color: black;
+}
+
+img.search {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 340px;
+    top: 25px; 
+}
+
+.headline h3 {
+    font-family: Helvetica;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+.comment-tab {
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.comment-tab nav ul {
+    list-style-type: none;
+    overflow: auto;
+    height: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color:#19bb9b;
+    
+}
+.comment-tab nav ul li {
+    float: left;
+    margin: 0 20px 0 20px;
+    border-left-style: solid;
+    border-left-width: thin;
+    border-left-color:#19bb9b;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+}
+
+/*-------------Records-----------------*/
+.record {
+    width: 380px;
+    height: 80px;
+}
+
+.records img.initial {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.records .time {
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 100;
+    color: #5f6773;
+    margin-left: 140px;
+}
+
+.records .message {
+    width: auto;
+    height: 30px;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 100;
+    color: black;
+    text-align: center;
+    background-color: #f8f6f6;
+    position: absolute;
+    margin-top: 25px;
+    left: 90px;
+} 
+
+.records .message2 {
+    width: auto;
+    height: 30px;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 100;
+    color: black;
+    text-align: center;
+    background-color: #7D96C2;
+    position: absolute;
+    margin-top: 25px;
+    left: 200px;
+} 
+
+
+
+/*-------------Text box-----------------*/
+
+.type {
+    position: absolute;
+    left: 20px;
+    top: 380px;
+    border-radius: 4px;
+}
+/*-------------Sennd-----------------*/
+.sendbutton {
+    position: absolute;
+    left: 290px;
+    top: 380px;
+}
+
+input[type="submit"] {
+    background-color: #60759B;
+    font-size: 20px;
+    font-weight: 200;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    width: 80px;
+    height: 55px;
+}

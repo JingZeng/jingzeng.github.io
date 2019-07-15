@@ -1,0 +1,262 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    vertical-align: baseline;
+}
+
+
+/* ---- frames --- */
+
+section.container {
+    position: absolute;
+    width: 960px;
+    height: 800px;
+    background-color: white;
+}
+
+.close {
+    position: absolute;
+    left: 930px;
+    top: 10px;
+    margin: 0;
+}
+
+.roundLabel {
+    position: absolute;
+    width: 170px;
+    height: 400px;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+.headline {
+    position: absolute;
+    left: 170px;
+    top: 0;
+    height: 150px;
+    width: 750px;
+    margin: auto;
+}
+
+.button-bar {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 80px;
+    width: 750px;
+    padding: 50px auto auto 50px;
+    margin: 0;
+}
+
+.reference {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 260px;
+    padding: 80px auto auto 50px;
+    margin: 0;
+}
+
+.stepsForm {
+    position: absolute;
+    left: 170px;
+    top: 170px;
+    width: 750px;
+    height: 400px;
+}
+
+.viewStep,
+.manageStep {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: 50px;
+    padding-right: 50px;
+}
+
+.confirm {
+    position: absolute;
+    left: 170px;
+    bottom: 170px;
+    width: 750px;
+    height: auto;
+    font-size: 20px;
+}
+
+.monitor {
+    position: absolute;
+    left: 210px;
+    bottom: 140px;
+    width: 750px;
+    height: auto;
+    font-size: 10px;
+}
+
+
+/* ---- contents ---- */
+
+input[type="button"],
+input[type="submit"] {
+    color: #19BB9B;
+    font-size: 24px;
+    font-weight: 300;
+    background-color: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 8px;
+    width: 180px;
+    height: 35px;
+}
+
+input[type="button"].call-to-action,
+input[type="submit"].call-to-action {
+    background-color: #19BB9B;
+    color: #FFFFFF;
+    border: none;
+    margin: 5px auto auto 50px;
+}
+
+.reference a {
+    font-size: 20px;
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+}
+
+.roundLabel .circleFrame1 {
+    width: 126px;
+    height: 126px;
+    background: #60759B;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 45px;
+}
+
+.roundLabel .circleFrame2 {
+    width: 126px;
+    height: 126px;
+    background: #60759B;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 220px;
+}
+
+.roundLabel .circleFrame3 {
+    width: 126px;
+    height: 126px;
+    background: #60759B;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 520px;
+}
+
+.roundLabel .circleFrame1 h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: lighter;
+    position: absolute;
+    left: 24px;
+    top: 14px;
+}
+
+.roundLabel .circleFrame2 h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: lighter;
+    position: absolute;
+    left: 20px;
+    top: 14px;
+}
+
+.roundLabel .circleFrame3 h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: lighter;
+    position: absolute;
+    left: 12px;
+    top: 20px;
+}
+
+.confirm label {
+    margin-top: 5px;
+    margin-right: 40px;
+    font-size: 14px;
+    color: darkgray;
+    font-weight: lighter;
+}
+
+.confirm img {
+    padding-top: 5px;
+    margin-right: 4px;
+}
+
+.stepsForm .viewStep {
+    position: relative;
+    left: 5px;
+    top: 50px;
+    height: 60px;
+    width: 700px;
+    margin: auto;
+    font-size: 20px;
+}
+
+.stepsForm .manageStep {
+    position: relative;
+    left: 410px;
+    top: 40px;
+    height: 50px;
+    width: 730px;
+    margin: auto;
+}
+
+.manageStep img {
+    margin-left: 30px;
+}
+
+.manageStep label {
+    font-size: 20px;
+    margin-left: 20px;
+    padding-bottom: 5px;
+    color: #19BB9B;
+}
+
+#goalComment {
+    position: absolute;
+    right: 48px;
+    bottom: 0px;
+}
+
+#dashLine {
+    position: absolute;
+    left: 12px;
+    top: 60px;
+    width: 50px;
+    height: 230px;
+    border-left: 1px dashed black;
+}
+
+.monitor img {
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.headline h2 {
+    font-weight: 400;
+    font-size: 36px;
+    position: absolute;
+    top: 60px;
+}
+
+.viewStep img {
+    margin-right: 20px;
+}

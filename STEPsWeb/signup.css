@@ -1,0 +1,193 @@
+<!doctype html>
+
+body {
+    margin: 0 auto;  
+}
+
+.size {
+    border-style: none;
+    width: 800px;
+    height: 800px;
+    border-color: black;
+}
+
+/*
+.close {
+    position: absolute;
+    left: 780px;
+    top: 20px;
+    margin: 0;
+}
+*/
+.container h2 {
+    font-family: Helvetica;
+    color: black;
+    font-size: 36px;
+    text-align: center;
+    font-weight:300;
+    position: absolute;
+    top: 70px;
+    left: 240px;
+}
+
+/*-------------Upload Photo-----------------*/
+.roundLabel .circleFrame {
+    width: 138px;
+    height: 138px;
+    background: #60759B;
+    border-radius: 69px;
+    position: absolute;
+    left: 166px;
+    top: 184px;
+}
+
+.roundLabel h1 {
+    font-family: Helvetica;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-weight: lighter;
+    position: absolute;
+    top: 14px;
+}
+
+/*-------------Names-----------------*/
+.input-firstname {
+    font-family: Helvetica;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 380px;
+    top: 210px;
+}
+
+.input-firstname input, .input-field select{
+    border: 1px solid #979797;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    left: 10px;
+}
+
+.input-lastname {
+    font-family: Helvetica;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 380px;
+    top: 280px;
+}
+.input-lastname input, .input-field select{
+    border: 1px solid #979797;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    left: 10px;
+}
+
+/*-------------Email-----------------*/
+.input-email {
+    font-family: Helvetica;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 160px;
+    top: 360px;
+}
+
+.input-email input, .input-field select{
+    border: 1px solid #979797;
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    left: 90px;
+}
+
+/*-------------Passwords Confirm -----------------*/
+.input-password {
+    font-family: Helvetica;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 160px;
+    top: 430px;
+}
+
+.input-password input, .input-field select{
+    border: 1px solid #979797;
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    left: 140px;
+}
+
+.input-confpass {
+    font-family: Helvetica;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 160px;
+    top: 500px;
+}
+
+.input-confpass input, .input-field select{
+    border: 1px solid #979797;
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    left: 50px;
+}
+
+/*-------------ClassCode-----------------*/
+.input-classcode {
+    font-family: Helvetica;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight:200;
+    position: absolute;
+    left: 160px;
+    top: 570px;
+}
+
+.input-classcode input, .input-field select{
+    border: 1px solid #979797;
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    left: 12px;
+}
+
+/*-------------Sign Up-----------------*/
+.signupbutton {
+    position: absolute;
+    left: 300px;
+    top: 650px;
+}
+
+input[type="submit"] {
+    background-color: #19BB9B;
+    font-size: 24px;
+    font-weight: 300;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    width: 180px;
+    height: 35px;
+}

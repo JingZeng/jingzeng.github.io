@@ -1,0 +1,185 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ---- frames --- */
+
+section.container {
+    position: absolute;
+    width: 960px;
+    height: 600px;
+    background-color: white;
+}
+
+.close {
+    position: absolute;
+    left: 930px;
+    top: 10px;
+    margin: 0;
+}
+
+.roundLabel {
+    position: absolute;
+    width: 170px;
+    height: 500px;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+.input-field {
+    position: absolute;
+    left: 170px;
+    top: 0;
+    height: 150px;
+    width: 730px;
+    margin: auto;
+}
+
+.options {
+    position: absolute;
+    left: 170px;
+    top: 150px;
+    height: 150px;
+    width: 730px;
+    padding: 80px auto auto 50px;
+    margin: 0;
+}
+
+.button-bar {
+    position: absolute;
+    left: 170px;
+    top: 370px;
+    height: 180px;
+    width: 730px;
+    padding: 80px auto auto 50px;
+    margin: 0;
+}
+
+.reference {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 90px;
+    width: 960px;
+    padding: 80px auto auto 50px;
+    margin: 0;
+}
+
+.button-bar {
+    margin: 45px 0 0 0;
+    height: 45px;
+}
+
+
+/* ---- contents ---- */
+
+.input-field input {
+    position: absolute;
+    bottom: 10px;
+    border-bottom: 1px solid #979797;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.calendar input {
+    height: 40px;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+input[type="button"],
+input[type="submit"] {
+    color: #19BB9B;
+    font-size: 24px;
+    font-weight: 300;
+    background-color: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 8px;
+    width: 180px;
+    height: 35px;
+}
+
+input[type="button"].call-to-action,
+input[type="submit"].call-to-action {
+    background-color: #19BB9B;
+    color: #FFFFFF;
+    border: none;
+    margin: 10px auto auto 135px;
+}
+
+select {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    border: 1px solid #19BB9B;
+    width: 257px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 24px;
+    background-color: white;
+}
+
+.options .icons {
+    position: absolute;
+    right: 5px;
+    border: none;
+}
+
+.options .icons img {
+    margin-right: 5px;
+}
+
+.toggle {
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    font-size: 20;
+}
+
+.calendar {
+    position: absolute;
+    top: 80px;
+    left: 120px;
+    font-size: 24px;
+}
+
+.options .icons a {
+    text-decoration: none;
+}
+
+.reference a {
+    font-size: 20px;
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+}
+
+.roundLabel .circleFrame {
+    width: 126px;
+    height: 126px;
+    background: #60759B;
+    border-radius: 63px;
+    position: absolute;
+    left: 25px;
+    top: 45px;
+}
+
+.roundLabel h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: lighter;
+    position: absolute;
+    left: 24px;
+    top: 14px;
+}

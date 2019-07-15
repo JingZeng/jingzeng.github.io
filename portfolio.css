@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+
+/* ========= general layout ========= */
+
+.port-titleline{
+	padding: 8em 0 1em 0;
+	text-align: center;
+}
+
+.port-titleline h1:after{
+     background: none repeat scroll 0 0 #4eaacc;
+     bottom: -0.5em;
+	 left: 50%;
+     content: "";
+     display: block;
+     height: 8px;
+     position: relative;
+     width: 60px;
+	 transform:translateX(-50%);
+}
+
+.port-label{
+	margin: -5em auto -1em auto;
+}
+
+.port-text p{
+	text-align: left !important;
+}
+
+.port-text h5, .port-text h6{
+	text-align: center !important;
+	text-transform: uppercase;
+}
+
+.port-text h3{
+	text-align: center !important;
+	text-transform: uppercase;
+	margin-bottom: 3em;
+}
+
+ .port-text h3:after {
+     background: none repeat scroll 0 0 #4eaacc;
+     bottom: -1em;
+	 left: 50%;
+     content: "";
+     display: block;
+     height: 2px;
+     position: relative;
+     width: 60px;
+	 transform:translateX(-50%);
+ }
+
+.port-text h4{
+	text-align: left !important;
+}
+
+
+.imgPadding{
+	padding: 2em;
+}
+/*
+.blockText{
+	padding: 0 15%;
+	padding: 0 ;
+}
+
+@media (max-width: 768px){
+	.blockText{
+	padding: 0 2%;
+}
+}*/
+
+/*
+.blockChart {
+	max-width: 95%;
+	margin: 0 auto;
+}*/
+
+
+.carousel-indicators li {
+    border-color: #117F95;
+}
+.carousel-indicators .active{
+    background-color: #117F95;
+}
+
+.carousel-control.left, .carousel-control.right {
+   background-image: none !important;
+   filter: none !important;
+}
+
+.carousel-control, .carousel-control:focus, .carousel-control:hover{
+  color: #117F95;
+}
+
+
+#myCarousel{
+	max-width: 85%;
+	margin: 0 auto;
+}
+
+@media (max-width: 768px){
+	#myCarousel{
+	max-width: 100%;
+	margin: 0 auto;
+}
+	.carousel-indicators li {
+    /*border-color: transparent;*/
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+}
+.carousel-indicators .active{
+    /*background-color: transparent;*/
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+	
+}
+}
+
+
+/* ========= hypnos ========= */
+
+
+.introVideo{
+	padding: 8em 0px;
+	background-color: #000;
+	overflow: hidden;
+}
+
+.videoContainer{
+	padding:  0px;
+	overflow: hidden;
+}
+
+
+#hypnosDocu{
+	width: 100% !important;
+	object-fit: fill;
+}
+
+#hypnosResearchIMG1, #hypnosResearchIMG2{
+	height: auto;
+	width: 70%;
+}
+
+@media (max-width: 768px){
+	#hypnosResearchIMG1, #hypnosResearchIMG2{
+	height: auto;
+	width: 45%;
+	}
+}
+
+
+
+
+/* ========= wonder lift ========= */
+
+.wonderList{
+	list-style: none;
+	text-align: left;
+	padding-left: 0;
+}
+
+.roleName{
+	margin: 2em 1em 1em;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	float: inherit;
+	display: inline;
+}
+
+.roleName h5{
+	font-size: 1.5em;	
+}
+
+
+#wonderPt1, #wonderPt2{
+	height: auto;
+	width: 80%;
+}
+
+#wonderRole1, #wonderRole2{
+	height: auto;
+	max-width: 100px;
+}
+
+@media (max-width: 768px){
+	#wonderPt1, #wonderPt2{
+	height: auto;
+	width: 45%;
+	}
+	
+	#wonderRole1, #wonderRole2{
+	height: auto;
+	width: 40%;
+}
+}
+
+/* ========= heart ========= */
+.heartLoop img{
+	max-height: 270px;
+	width: auto;
+}
+
+/* ========= sketchpad ========= */
+.listNoPadding ul {
+	text-align: left;
+	/*padding-left: 0;*/
+	padding-left: 14px;
+}
+
+
+
+/*========== BACK NEXT BUTTON ==========*/
+
+.prevNext{
+	width: 100%;
+}
+
+.prevNext a {
+    text-decoration: none;
+    display: inline-block;
+	float: right;
+    padding: 8px 16px;
+	margin: 0 1em;
+}
+
+.prevNext a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.prevNext .prevPg {
+    background-color: #f1f1f1;
+    color: black;
+
+}
+
+.prevNext .nextPg {
+    background-color: #4eaacc;
+    color: white;
+
+}
+

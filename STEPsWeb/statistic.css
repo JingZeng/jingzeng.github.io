@@ -1,0 +1,214 @@
+
+body {
+    display: block;
+    background-image:url("assets/backcolorgrey.jpg");
+    background-repeat: repeat;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*----------------------- Header -------------------------*/
+header {
+    width: auto;
+    height: 100px;
+    display: block;
+    
+}
+
+header .container {
+    background-color: #60759B;
+    margin: 0 auto;
+    overflow: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-width: 600px;
+    display: block;
+}
+
+#logowhite {
+    width: 233px;
+    height: 101px;
+}
+
+header .container > nav {
+    float: right;
+}
+
+header .container nav > ul {
+    list-style-type: none;
+    overflow: auto;
+    margin: 30px 10px 10px 0;
+    padding: 0;
+}
+
+header .container nav > ul > li {
+    float: left;
+    margin: 0 40px 0 0;
+    align-items: center;
+    vertical-align: middle;
+    /* how to align the items?? */
+}
+
+/*----------------------- Charts and Results -------------------------*/
+section .container{
+    background-position: center;
+}
+
+.albumname {
+    display: block;
+}
+h1 {
+    font-family: Helvetica;
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.stats {
+    margin: 0;
+    overflow: auto;
+    list-style-type: none;
+    min-width: 600px;
+}
+
+.stats li {
+    overflow: auto;
+}
+
+.stats li img.chart {
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.stats h3 {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.stats p {
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+li.stat1{
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    float: left;
+    
+}
+
+li.stat2{
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    float: right;
+    overflow: auto;
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width:thin; 
+}
+
+li.stat3{
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    float: left;
+    overflow: auto;
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width:thin; 
+}
+
+li.stat4{
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    float: right;
+}
+li.stat5{
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    float: left;
+}
+li.stat6{
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    float: right;
+    overflow: auto;
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width:thin; 
+}
+li.stat7{
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    float: left;
+    overflow: auto;
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width:thin; 
+}
+li.stat8{
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    float: right;
+}
+
+/* ----------------footer------------------ */
+footer{
+    height: 44px;
+    background-color: #60759B;
+    font-family: Helvetica;
+}
+
+footer .container {
+    color: #FFFFFF;
+    height: 20px;
+    margin-top: 12px;
+    margin-left: 20px;
+    width: auto;
+    font-size: 12px;
+    text-align: center;
+    float: left;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer .container .copyright-info, footer .container .footer-nav {
+    float: left;
+}
+
+footer .container .copyright-info {
+    margin-right: 100px;
+}
+
+footer .container .footer-nav ul {
+    margin: 0;
+    overflow: auto;
+}
+
+footer .container .footer-nav ul > li {
+    float: left;
+    margin: 0 30px 0 0;
+}
